@@ -1,0 +1,32 @@
+{
+    "compilerOptions": {
+        "module": "CommonJS",
+        "esModuleInterop": true,
+        "target": "ESNext",
+        "outDir": "./dist",
+        "allowJs": true,
+        "strict": false,
+        "moduleResolution": "node",
+        "baseUrl": "./src",
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "paths": {
+            "*": [
+                "node_modules/*"
+            ]
+        },
+        "typeRoots": [
+            "node_modules/types"
+        ],
+        "types": [
+            "node", "express", "cors",
+            "morgan", "mysql", "dotenv"
+        ]
+    },
+    "include": [
+        "./src/**/*"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}
