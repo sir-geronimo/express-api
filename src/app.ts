@@ -3,13 +3,13 @@ import cors from 'cors';
 import morgan from 'morgan';
 import bodyParser from 'body-parser';
 
-import IControllerBase from './interfaces/IControllerBase.interface';
+import IController from './interfaces/IController.interface';
 
 class App {
     private app: Application;
     private port: number;
 
-    constructor(controllers: Array<IControllerBase>, port: number) {
+    constructor(controllers: Array<IController>, port: number) {
         this.app = express();
         this.port = port;
 
@@ -28,7 +28,7 @@ class App {
         this.app.use(middlewares);
     }
 
-    private initControllers(controllers: Array<IControllerBase>): void {
+    private initControllers(controllers: Array<IController>): void {
         controllers.forEach(_controller => {
             this.app.use('/', _controller.router)
         });
