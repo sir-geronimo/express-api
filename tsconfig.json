@@ -19,8 +19,7 @@
             "node_modules/types"
         ],
         "types": [
-            "node", "express", "cors",
-            "morgan", "mysql", "dotenv"
+            "node", "express", "morgan", "mysql"
         ]
     },
     "include": [
