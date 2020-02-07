@@ -27,7 +27,12 @@ export default class HomeController implements IControllerBase {
             title: 'Hola bb'
         });
     }
-    getMany(req: Request, res: Response): any {}
+    getMany(req: Request, res: Response): any {
+        return res.json({
+            url: req.url,
+            title: 'Hello bb'
+        })
+    }
     create(req: Request, res: Response): any {}
     update(req: Request, res: Response): any {}
     delete(req: Request, res: Response): any {}

@@ -34,7 +34,7 @@ class App {
         });
     }
 
-    public listen(env: string|undefined) {
+    public listen(env: string | undefined) {
         this.app.listen(this.port, () => {
             console.log(
                 `Server listening on port: http://localhost:%d in %s mode`,

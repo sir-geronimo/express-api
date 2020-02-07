@@ -6,7 +6,7 @@ dotenv.config();
 import HomeController from './controllers/home.controller';
 
 let port: number;
-const env: string|undefined = process.env.NODE_ENV;
+const env: string | undefined = process.env.NODE_ENV;
 
 switch (env) {
     case 'development':
