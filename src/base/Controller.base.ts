@@ -8,7 +8,7 @@ export default abstract class ControllerBase implements IController {
 
     constructor(path: string, router: express.Router) {
         this.path = path;
-        this.router = express.Router();
+        this.router = router;
         this.initRoutes();
     }
 

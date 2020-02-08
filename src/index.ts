@@ -4,6 +4,8 @@ dotenv.config();
 
 // Controllers
 import HomeController from './controllers/home.controller';
+import UserController from './controllers/user.controller';
+import IController from './interfaces/IController.interface';
 
 let port: number;
 const env: string | undefined = process.env.NODE_ENV;
@@ -20,9 +22,12 @@ switch (env) {
 }
 
 function main() {
-    const app = new App([
+    const controllers: Array<IController> = [
+        new UserController(),
         new HomeController()
-    ], port);
+    ];
+    
+    const app = new App(controllers, port);
 
     app.listen(env);
 }
