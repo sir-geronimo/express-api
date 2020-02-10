@@ -38,4 +38,4 @@ Thumbs.db
 dist/**/*
 
 # config files
-src/config/db.config.ts
+src/config/database.ts
