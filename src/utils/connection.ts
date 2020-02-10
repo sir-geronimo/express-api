@@ -1,4 +1,4 @@
-import config from './../config/db.config';
+import config from '../config/database';
 import mysql from 'mysql';
 
 export const pool = mysql.createPool(config);
