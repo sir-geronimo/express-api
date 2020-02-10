@@ -16,8 +16,8 @@ export default abstract class ControllerBase implements IController {
         this.router.get(`${this.path}:id`, this.get);
         this.router.get(this.path, this.getMany);
         this.router.post(this.path, this.create);
-        this.router.put(this.path, this.update);
-        this.router.delete(this.path, this.delete);
+        this.router.put(`${this.path}:id`, this.update);
+        this.router.delete(`${this.path}:id`, this.delete);
     }
     
     get(req: Request, res: Response): Response {
