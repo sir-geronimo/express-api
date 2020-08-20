@@ -12,21 +12,13 @@
         "experimentalDecorators": true,
         "emitDecoratorMetadata": true,
         "paths": {
-            "*": [
-                "node_modules/*"
-            ]
+            "*": [ "node_modules/*" ]
         },
-        "typeRoots": [
-            "node_modules/types"
-        ],
+        "typeRoots": [ "node_modules/types" ],
         "types": [
-            "node", "express", "morgan", "mysql"
+            "node", "express", "morgan", "mssql"
         ]
     },
-    "include": [
-        "./src/**/*"
-    ],
-    "exclude": [
-        "node_modules"
-    ]
+    "include": [ "./src/**/*" ],
+    "exclude": [ "node_modules" ]
 }
