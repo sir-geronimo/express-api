@@ -18,6 +18,7 @@ switch (env) {
         port = 5000;
         break;
     default:
+        port = 8081
         break;
 }
 
@@ -26,7 +27,7 @@ function main() {
         new UserController(),
         new HomeController()
     ];
-    
+
     const app = new App(controllers, port);
 
     app.listen(env);

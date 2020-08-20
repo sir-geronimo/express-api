@@ -7,7 +7,7 @@ import IController from './interfaces/IController.interface';
 
 class App {
     private app: Application;
-    private port: number;
+    private readonly port: number;
 
     constructor(controllers: Array<IController>, port: number) {
         this.app = express();
@@ -29,9 +29,8 @@ class App {
     }
 
     private initControllers(controllers: Array<IController>): void {
-        controllers.forEach(_controller => {
-            this.app.use('/', _controller.router)
-        });
+        controllers.forEach(_controller =>
+            this.app.use('/', _controller.router));
     }
 
     public listen(env: string | undefined) {

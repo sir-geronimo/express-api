@@ -19,7 +19,7 @@ export default abstract class ControllerBase implements IController {
         this.router.put(`${this.path}:id`, this.update);
         this.router.delete(`${this.path}:id`, this.delete);
     }
-    
+
     get(req: Request, res: Response): Response {
         return res.json({
             url: req.url,

@@ -1,10 +1,22 @@
-import BaseEntity from '../base/Entity.base';
+import { Entity, PrimaryGeneratedColumn, Column, BaseEntity } from 'typeorm';
 
+@Entity()
 export default class UserEntity extends BaseEntity {
-    Id: number | string;
-    FirstName: string;
-    LastName: string;
-    UserName: string;
-    Password: string;
-    Image: string;
+    @PrimaryGeneratedColumn()
+    id: number;
+
+    @Column()
+    firstName: string;
+
+    @Column()
+    lastName: string;
+
+    @Column()
+    userName: string;
+
+    @Column()
+    password: string;
+
+    @Column({ nullable: true })
+    image?: string;
 }
