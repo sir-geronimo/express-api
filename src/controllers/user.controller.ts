@@ -5,6 +5,5 @@ import ControllerBase from './../base/Controller.base';
 export default class UserController extends ControllerBase {
     constructor() {
         super('/users/', express.Router());
-        console.log(this.path);
     }
 }
